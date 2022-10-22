@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "5bb23116-9543-466e-b088-3c20252baf25",
+		"name": "Spring Redis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/persons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"persons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Andy\",\n    \"age\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Bob\",\n    \"age\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

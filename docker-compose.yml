@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_DATABASE=persondb
+      - MYSQL_ROOT_PASSWORD=dbadmin
+    volumes:
+      - db_student:/var/lib/mysql
+    networks:
+      - spring-redis-network
+    ports:
+      - "5306:3306"
+
+  redis:
+    image: redis:latest
+    networks:
+      - spring-redis-network
+    ports:
+      - "6379:6379"
+
+volumes:
+  db_student:
+    driver: local
+
+networks:
+  spring-redis-network:
+    driver: bridge
